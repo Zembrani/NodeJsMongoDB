@@ -1,0 +1,37 @@
+{{#each error}}
+<div class="alert alert-danger">{{text}}</div>
+{{/each}}
+
+{{#if admin}}
+<a href="/contato/add"><button type="button" class="btn btn-primary mt-1">Adicionar contato</button></a>
+<div class="jumbotron">
+    <h1 class="display-4">Obrigado pelo seu interesse!</h1>
+    <p class="lead">Fale conosco através dos contatos abaixo.</p>
+    <hr class="my-4">
+    {{#each contatos}}
+    <div class="card mt-4">
+        <div class="card-body">
+            <p>{{contato}}</p>
+            <a href="/contato/update/{{id}}"><button type="button" class="btn btn-primary mt-2">Alterar
+                    contato</button></a>
+            <form action="/contato/deletar" method="POST">
+                <input type="hidden" id="id" name="id" value="{{id}}">
+                <button type="submit" class="btn btn-danger mt-2">Deletar</button>
+            </form>
+        </div>
+    </div>
+    {{/each}}
+</div>
+{{else}}
+
+<div class="jumbotron">
+    <h1 class="display-4">Obrigado pelo seu interesse!</h1>
+    <p class="lead">Fale conosco através dos contatos abaixo.</p>
+    <hr class="my-4">
+    {{#each contatos}}
+
+    <p>{{contato}}</p>
+
+    {{/each}}
+</div>
+{{/if}}

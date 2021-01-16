@@ -1,0 +1,17 @@
+<h3>Sobre nós</h3>
+{{#each sobrenos}}
+<div class="card">
+  <div class="card-body">
+    <form action="/sobrenos/update" method="POST">
+      <label for="titulo">Titulo:</label>
+      <input type="textarea" id="titulo" name="titulo" class="form-control" value='{{titulo}}'>
+      <input type="hidden" name="id" value="{{id}}">
+      <label for="sobre">Texto:</label>
+      <input type="textarea" id="sobre" name="sobre" class="form-control" value='{{sobre}}'>
+      <br>
+      <button type="submit" class="btn btn-success">Concluir</button>
+    </form>
+  </div>
+</div>
+
+{{/each}}

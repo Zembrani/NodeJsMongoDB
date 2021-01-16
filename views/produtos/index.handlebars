@@ -1,0 +1,35 @@
+<h3>Produtos</h3>
+{{#each error}}
+<div class="alert alert-danger">{{text}}</div>
+{{else}}
+{{/each}}
+
+{{#if admin}}
+<a href="/produtos/addprod"><button type="button" class="btn btn-primary mt-1">Adicionar produto</button></a>
+{{#each produtos}}
+<div class="card mt-4">
+  <div class="card-body">
+    <h4>{{nome}}</h4>
+    <small>Descrição: {{descricao}}</small>
+    <form action="/produtos/deletar" method="POST">
+      <input type="hidden" id="id" name="id" value="{{id}}">
+      <button type="submit" class="btn btn-danger mt-2 float-right">Deletar
+        produto</button>
+    </form>
+    <a href="/produtos/updateprod/{{id}}"><button type="button" class="btn btn-primary mt-2 float-right">Alterar
+        produto</button></a>
+  </div>
+</div>
+{{else}}
+{{/each}}
+{{else}}
+{{#each produtos}}
+<div class="card mt-4">
+  <div class="card-body">
+    <h4>{{nome}}</h4>
+    <small>Descrição: {{descricao}}</small>
+  </div>
+</div>
+{{else}}
+{{/each}}
+{{/if}}

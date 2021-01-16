@@ -1,0 +1,19 @@
+{{#each error}}
+<div class="alert alert-danger">{{text}}</div>
+{{else}}
+
+{{/each}}
+
+<h3>Novo produto</h3>
+<div class="card">
+  <div class="card-body">
+    <form action="/produtos/addprod/new" method="POST">
+      <label for="name">Nome:</label>
+      <input type="text" id="name" name="name" placeholder="Nome da peça" class="form-control">
+      <label for="description">Descrição:</label>
+      <input type="textarea" id="description" name="description" placeholder="Sobre a peça" class="form-control">
+      <br>
+      <button type="submit" class="btn btn-success">Criar produto</button>
+    </form>
+  </div>
+</div>

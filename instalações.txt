@@ -1,0 +1,14 @@
+instalar o node (node e npm já serão instalados)
+npm install --save express \\para subir o server com mais facilidade
+npm install nodemon -g \\para atualizar o server a cada atualização
+npm install sequelize --save \\abstração dos comandos sql (orm) Atual versão não utiliza
+npm install mysql --save
+npm install --save express-hanblebars //permite utilizar variáveis do backend no html
+npm install --save body-parser //auxilia no recebimento de métodos post
+instalar banco de bados mongodb //Este banco é orientado a documentos
+npm install mongoose --save //auxilia o node para trabalhar com o mongodb (odm)
+npm install --save express-session //este módulo e o connect flash são responsáveis pelo middleware
+npm install --save connect-flash
+npm install bcrypt // módulo para encriptar a senha
+npm install --save passport //módulo para fazer login, este módulo permite fazer login por contas de terceiros
+npm install --save passport-local //estratégia que será utilizada, local é para verificação na própria base

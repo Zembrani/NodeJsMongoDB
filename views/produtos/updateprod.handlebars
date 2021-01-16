@@ -1,0 +1,20 @@
+<h3>Alterar um produto</h3>
+{{#each error}}
+<div class="alert alert-danger">{{text}}</div>
+{{else}}
+{{/each}}
+{{#each produto}}
+<div class="card">
+  <div class="card-body">
+    <form action="/produtos/update" method="POST">
+      <input type="hidden" name="id" value="{{id}}">
+      <label for="name">Nome:</label>
+      <input type="text" id="name" name="name" class="form-control" value="{{nome}}">
+      <label for="description">Descrição:</label>
+      <input type="textarea" id="description" name="description" class="form-control" value="{{descricao}}">
+      <br>
+      <button type="submit" class="btn btn-success">Alterar produto</button>
+    </form>
+  </div>
+</div>
+{{/each}}

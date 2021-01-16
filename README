@@ -1,0 +1,19 @@
+Trabalho realizado para a matéria de desenvolvimento web.
+
+Autor: Renato Douglas Zembrani
+
+Site para uma loja.
+
+Páginas: Apresentação da empresa, produtos, contato e localização, também terá uma página para acesso de administrador.
+
+Funções do administrador: O administrador porerá adicionar, remover ou alterar produtos.
+
+Contato: Na página contato os clientes poderão enviar email para a empresa.
+
+Produtos: Na tela produtos serão apresentados os produtos, poderá ser feita pesquisa, e adicionar para um carrinho para solicitar orçamento.
+
+Extra: Se for possível, será feito mais funcionalidades para o administrador, como alterar textos das outras telas.
+
+Linguagem para front-end: Css (Bootstrap), HTML5, JavaScript.
+Back-end: JavaScript(Node.js)
+Banco de dados: MongoDB(noSql)

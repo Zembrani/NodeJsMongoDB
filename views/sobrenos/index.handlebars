@@ -1,0 +1,44 @@
+{{#each error}}
+<div class="alert alert-danger">{{text}}</div>
+{{/each}}
+
+<h3>Sobre nós</h3>
+{{#if admin}}
+<a href="/sobrenos/add"><button type="button" class="btn btn-primary mt-1">Adicionar texto</button></a>
+
+{{#each sobrenos}}
+
+<div class="container mt-5">
+    <!-- Example row of columns -->
+    <div class="row">
+        <div class="col-md-4">
+            <h2>{{titulo}}</h2>
+            <p>{{sobre}}</p>
+            <form action="/sobrenos/deletar" method="POST">
+                <input type="hidden" id="id" name="id" value="{{id}}">
+                <button type="submit" class="btn btn-danger mt-4 float-right">Deletar
+                    texto</button>
+            </form>
+            <a href="/sobrenos/update/{{id}}"><button type="button" class="btn btn-primary mt-4 float-right">Alterar
+                    texto</button></a>
+        </div>
+    </div>
+</div>
+
+{{/each}}
+
+{{else}}
+{{#each sobrenos}}
+
+<div class="container mt-5">
+    <!-- Example row of columns -->
+    <div class="row">
+        <div class="col-md-4">
+            <h2>{{titulo}}</h2>
+            <p>{{sobre}}</p>
+        </div>
+    </div>
+</div>
+
+{{/each}}
+{{/if}}
